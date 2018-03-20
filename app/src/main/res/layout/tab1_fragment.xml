@@ -3,21 +3,61 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="horizontal"
+    android:background="@drawable/breakfast"
+    >
 
     <TextView
+        android:id="@+id/textTab1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
+        android:layout_below="@+id/btnTEST"
+        android:layout_centerHorizontal="true"
+        android:text="Appetizer"
         android:textAlignment="center"
-        android:text="Tab1"
-        android:layout_marginTop="40dp"
-        android:id="@+id/textTab1"/>
+        android:textSize="25sp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnTEST"
         android:text="TESTBTN 1"/>
+
+    <RadioGroup
+        android:id="@+id/radioAppetizer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTab1"
+        android:layout_toRightOf="@+id/btnTEST">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTab1"
+            android:layout_marginTop="42dp"
+            android:layout_toStartOf="@+id/textTab1"
+            android:text="Nachos" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/radioButton"
+            android:layout_below="@+id/radioButton"
+            android:layout_marginTop="14dp"
+            android:checked="false"
+            android:duplicateParentState="false"
+            android:text="Mot Sticks" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/radioButton2"
+            android:layout_below="@+id/radioButton2"
+            android:layout_marginTop="15dp"
+            android:text="Wings" />
+    </RadioGroup>
 
 </RelativeLayout>
